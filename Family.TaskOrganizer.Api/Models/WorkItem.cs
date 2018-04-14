@@ -2,7 +2,7 @@
 
 namespace Family.TaskOrganizer.Api.Models
 {
-    public class Task
+    public class WorkItem
     {
         public Guid TaskId { get; set; }
         public string Description { get; set; }

@@ -8,6 +8,6 @@ namespace Family.TaskOrganizer.Api.Models
         public Guid BoardId { get; set; }
         public string Name { get; set; }
         public List<string> FamilyMembers { get; set; }
-        public List<Guid> Tasks { get; set; }
+        public List<WorkItem> WorkItems { get; set; }
     }
 }
