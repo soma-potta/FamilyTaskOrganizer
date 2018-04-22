@@ -16,16 +16,16 @@ namespace Family.TaskOrganizer.Api.Controllers
         }
 
         [HttpPost]
-        [Route("boards/{Guid: boardId}/tasks/add")]
-        public void Post([FromBody]WorkItem workItem)
+        [Route("boards/{boardId}/tasks/add")]
+        public ActionResult Post(Guid boardId, [FromBody]WorkItem workItem)
         {
             //validate access to the board id
 
             //validate request body through an action filter
 
             //add task to board
-            var boardId = Guid.Empty;
             _workItemsService.AddWorkItem(boardId, workItem);
+            return Ok();
         }
     }
 }

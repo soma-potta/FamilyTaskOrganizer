@@ -26,7 +26,7 @@ namespace Family.TaskOrganizer.Api.Infrastructure.Repositories
         {
             var boards = GetBoardsCollection();
 
-            var board =  boards.Find(x => x.BoardId == boardId).FirstOrDefault();
+            var board =  boards.Find(x => x.Name == "Vacation").FirstOrDefault();
             board.WorkItems.Add(workItem);
         }
     }
